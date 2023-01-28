@@ -1,0 +1,124 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  <script type="text/javascript">
+    const otomobileImages = [];
+    
+    var x = 0;
+
+    function addImg(Img){
+        otomobileImages.push(Img);
+    }
+
+    function next(){
+             document.getElementById('otoImg')
+             .src=otomobileImages[x];
+             x++;
+             x=x%otomobileImages.length;
+    }
+
+  </script>
+
+{% endblock head %}
+
+
+
+{% block body %}
+
+
+{% if otomobile %}
+
+{% for image in images %}
+        <script type="text/javascript" language="JavaScript">
+         addImg("templates/Images/{{image.img}}"); 
+        </script>
+        
+         
+{% endfor %}
+
+
+
+<h2 > {{otomobile.title}}</h2>
+<hr>
+ 
+<div style="border-style: double; background-color: #ABBAEA;
+  width: 1100px;margin-top: 10px;">
+  
+  <div style=" height: 600px;
+  width: 600px;float: left;margin-top: 10px;">
+	<!--image-->
+  <img id="otoImg" onclick=next(); src="templates\Images\{{otomobile.cover_image}}"  width="600" height="600">
+ 
+  
+  
+
+  </div>
+  
+  
+  <div style="border-style: double; height: 600px;background-color: #7fc7af;
+  width: 450px;float: right;margin-top: 10px;">
+
+	<!--price-->
+  <h4>
+    Price: 
+
+            <script type="text/javascript">
+                function numberWithCommas(num) {
+                    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                }
+                document.write(numberWithCommas({{otomobile.price}}));
+            </script>
+    
+    <br>
+    
+    Brand: {{otomobile.brand}}<br>
+    Series: {{otomobile.series}}<br>
+    Model: {{otomobile.model}}<br>
+    Year: {{otomobile.year}}<br>
+    Fuel: {{otomobile.fuel}}<br>
+    Gear: {{otomobile.gear}}<br>
+    Color: {{otomobile.color}}<br>
+    Km: <script type="text/javascript">
+                function numberWithCommas(num) {
+                    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                }
+                document.write(numberWithCommas({{otomobile.km}}));
+            </script><br>
+    Body Type: {{otomobile.body_type}}<br>
+    Engine Power: {{otomobile.engine_power}}<br>
+    Engine Volume: <script type="text/javascript">
+                function numberWithCommas(num) {
+                    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                }
+                document.write(numberWithCommas({{otomobile.engine_volume}}));
+            </script><br>
+    Traction: {{otomobile.traction}}<br>
+    City: {{otomobile.city}}<br>
+    District: {{otomobile.district}}<br>
+    Seller Name: {{seller.name}}<br>
+    Seller Phone Number: {{seller.phone_number}}<br>
+    </h4>
+  </div>
+  
+  
+  <div style="border-style: double; 
+  width: 1100px;float: left;margin-top: 30px;background-color: #EBEBEB; ;">
+  <h4>Description:</h4>
+  <hr>
+  
+	<!--desc-->
+    {{otomobile.description|safe}}
+
+  </div>
+
+  </div>
+
+{% else %}
+<div class = "alert alert-warning">
+    There is no such otomobile advert.
+</div>
+{% endif %}
+
+{% endblock body %}
+
+

@@ -1,0 +1,115 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  <script type="text/javascript">
+    const motorcycleImages = [];
+    
+    var x = 0;
+
+    function addImg(Img){
+        motorcycleImages.push(Img);
+    }
+
+    function next(){
+             document.getElementById('otoImg')
+             .src=motorcycleImages[x];
+             x++;
+             x=x%motorcycleImages.length;
+    }
+
+  </script>
+
+{% endblock head %}
+
+
+
+{% block body %}
+
+
+{% if motorcycle %}
+
+{% for image in images %}
+        <script type="text/javascript" language="JavaScript">
+         addImg("templates/Images/{{image.image}}"); 
+        </script>
+        
+         
+{% endfor %}
+
+
+
+<h2 > {{motorcycle.title}}</h2>
+<hr>
+ 
+<div style="border-style: double; background-color: #ABBAEA;
+  width: 1100px;margin-top: 10px;">
+  
+  <div style=" height: 600px;
+  width: 600px;float: left;margin-top: 10px;">
+	<!--image-->
+  <img id="otoImg" onclick=next(); src="templates\Images\{{motorcycle.cover_image}}"  width="600" height="600">
+ 
+  
+  
+
+  </div>
+  
+  
+  <div style="border-style: double; height: 600px;background-color: #7fc7af;
+  width: 450px;float: right;margin-top: 10px;">
+
+	<!--price-->
+  <h4>
+    Price: 
+
+            <script type="text/javascript">
+                function numberWithCommas(num) {
+                    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                }
+                document.write(numberWithCommas({{motorcycle.price}}));
+            </script>
+    
+    <br>
+    
+    Brand: {{motorcycle.brand}}<br>
+    Model: {{motorcycle.model}}<br>
+    Year: {{motorcycle.year}}<br>
+    Gear: {{motorcycle.gear}}<br>
+    Color: {{motorcycle.color}}<br>
+    Km: <script type="text/javascript">
+                function numberWithCommas(num) {
+                    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                }
+                document.write(numberWithCommas({{motorcycle.km}}));
+            </script><br>
+    Body Type: {{motorcycle.type}}<br>
+    Engine Power: {{motorcycle.engine_power}}<br>
+    Engine Volume: {{motorcycle.engine_volume}}<br>
+    City: {{motorcycle.city}}<br>
+    District: {{motorcycle.district}}<br>
+    Seller Name: {{seller.name}}<br>
+    Seller Phone Number: {{seller.phone_number}}<br>
+    </h4>
+  </div>
+  
+  
+  <div style="border-style: double; 
+  width: 1100px;float: left;margin-top: 30px;background-color: #EBEBEB; ;">
+<h4>Description:</h4>
+  <hr>
+	<!--desc-->
+    {{motorcycle.description|safe}}
+
+  </div>
+
+  </div>
+
+{% else %}
+<div class = "alert alert-warning">
+    There is no such motorcycle advert.
+</div>
+{% endif %}
+
+{% endblock body %}
+
+

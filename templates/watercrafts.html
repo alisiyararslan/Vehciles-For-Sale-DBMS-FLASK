@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  <script type="text/javascript">
+    
+
+  </script>
+
+{% endblock head %}
+
+{% block body %}
+
+<h3>Watercraft Adverts</h3>
+<hr>
+
+<div style=" height: 50px;
+  width: 1120px;">
+  
+    <div style=" height: 50px;width: 650px;float: left;">
+  
+        <div class="input-group mb-3" style="float: left;">
+
+            <form action="/searchwatercraft" method = "post">
+                <input type="text" name = "keyword" class="input-sm" maxlength="64" placeholder="Search...">
+                <button type="submit" class="btn btn-danger">Search</button>
+            </form>
+
+        </div>
+
+    </div>
+  
+  <div style=" height: 50px;width: 150px;float: right;">
+  
+    <div class="dropdown" >
+  
+  <button class="btn btn-info dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Advanced Sorting
+  </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="/sortwatercraft/highestFirstPrice">By Price (highest first)</a>
+        <a class="dropdown-item" href="/sortwatercraft/lowestFirstPrice">By Price (lowest first)</a>
+        <a class="dropdown-item" href="/sortwatercraft/newestFirstDate">By Date (newest posting first)</a>
+        <a class="dropdown-item" href="/sortwatercraft/oldestFirstDate">By Date (oldest post first)</a>
+        <a class="dropdown-item" href="/sortwatercraft/oldFirstYear">By Year (old first)</a>
+        <a class="dropdown-item" href="/sortwatercraft/newFirstYear">By Year (new first)</a>  
+      </div>
+    </div>
+  </div>
+
+  </div>
+<br><br>
+
+{% if watercrafts %}
+
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Image</th>
+            <th scope="col">Title</th>
+            <th scope="col">Year</th>
+            <th scope="col">Color</th>
+            <th scope="col">Price</th>
+            <th scope="col">City</th>
+            <th scope="col">District</th>
+            <th scope="col"></th>
+            
+        </tr>
+        </thead>
+        <tbody>
+        {% for watercraft in watercrafts %}
+  
+        <tr  >
+            <td>{{watercraft.id}}  </td>
+            <th scope="row"><img  src="\templates\Images\{{watercraft.cover_image}}"  width="100" height="100"></th><!---->
+            
+            <td>{{watercraft.title}}</td>
+            <td>{{watercraft.year}}</td>
+            <td>{{watercraft.color}}</td>
+            <td>
+            
+            
+            <script type="text/javascript">
+                function numberWithCommas(num) {
+                    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                }
+                document.write(numberWithCommas({{watercraft.price}}));
+            </script>
+            </td>
+            <td>{{watercraft.city}}</td>
+            <td>{{watercraft.district}}</td>
+            
+            <td><a href="/watercraft/{{watercraft.id}}" class="btn btn-info" >Go To Advert</a></td>
+        </tr>
+
+        {% endfor %}
+        
+        </tbody>
+    </table> 
+
+{% else %}
+{% endif %}
+
+{% endblock body %}

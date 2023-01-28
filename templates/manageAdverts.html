@@ -1,0 +1,318 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  <script type="text/javascript">
+    
+
+  </script>
+
+{% endblock head %}
+
+{% block body %}
+
+
+
+
+
+
+<br><h2>Manage Adverts</h2>
+<hr><br>
+
+{% if otomobiles %}
+    <h5>All otomobile adverts:</h5>
+    <br>
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Image</th>
+            <th scope="col">Brand</th>
+            <th scope="col">Series</th>
+            <th scope="col">Model</th>
+            <th scope="col">Title</th>
+            <th scope="col">Year</th>
+            <th scope="col">Color</th>
+            <th scope="col">Price</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+
+            
+        </tr>
+        </thead>
+        <tbody>
+        {% for otomobile in otomobiles %}
+  
+        <tr  >
+            <td>{{otomobile.id}}  </td>
+            <th scope="row"><img  src="\templates\Images\{{otomobile.cover_image}}"  width="100" height="100"></th><!---->
+            
+            <td>{{otomobile.brand}}  </td>
+            <td>{{otomobile.series}}</td>
+            <td>{{otomobile.model}}</td>
+            <td>{{otomobile.title}}</td>
+            <td>{{otomobile.year}}</td>
+            <td>{{otomobile.color}}</td>
+            <td>
+            
+            
+            <script type="text/javascript">
+                function numberWithCommas(num) {
+                    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                }
+                document.write(numberWithCommas({{otomobile.price}}));
+            </script>
+            </td>
+            
+
+            <td><a href="/otomobile/{{otomobile.id}}" class="btn btn-info" >Go To Advert</a></td>
+            <td><a href="/deleteotomobile/{{otomobile.id}}" class = "btn btn-danger">Delete</a></td>
+        </tr>
+
+        {% endfor %}
+        
+        </tbody>
+    </table> 
+
+{% else %}
+{% endif %}
+
+
+{% if motorcycles %}
+    <br>
+    <h5>All motorcycle adverts:</h5>
+    <br>
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Image</th>
+            <th scope="col">Brand</th>
+            <th scope="col">Model</th>
+            <th scope="col">Type</th>
+            <th scope="col">Title</th>
+            <th scope="col">Year</th>
+            <th scope="col">Color</th>
+            <th scope="col">Price</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+
+            
+        </tr>
+        </thead>
+        <tbody>
+        {% for motorcycle in motorcycles %}
+  
+        <tr  >
+            <td>{{motorcycle.id}}  </td>
+            <th scope="row"><img  src="\templates\Images\{{motorcycle.cover_image}}"  width="100" height="100"></th><!---->
+            
+            <td>{{motorcycle.brand}}  </td>
+            
+            <td>{{motorcycle.model}}</td>
+            <td>{{motorcycle.type}}</td>
+            <td>{{motorcycle.title}}</td>
+            <td>{{motorcycle.year}}</td>
+            <td>{{motorcycle.color}}</td>
+            <td>
+            
+            
+            <script type="text/javascript">
+                function numberWithCommas(num) {
+                    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                }
+                document.write(numberWithCommas({{motorcycle.price}}));
+            </script>
+            </td>
+            
+            
+           
+            <td><a href="/motorcycle/{{motorcycle.id}}" class="btn btn-info" >Go To Advert</a></td>
+            <td><a href="/deletemotorcycle/{{motorcycle.id}}" class = "btn btn-danger">Delete</a></td>
+        </tr>
+
+        {% endfor %}
+        
+        </tbody>
+    </table> 
+
+
+{% else %}
+{% endif %}
+
+
+{% if watercrafts %}
+    <br>
+    <h5>All watercraft adverts:</h5>
+    <br>
+
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Image</th>
+            <th scope="col">Title</th>
+            <th scope="col">Year</th>
+            <th scope="col">Color</th>
+            <th scope="col">Price</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+
+            
+        </tr>
+        </thead>
+        <tbody>
+        {% for watercraft in watercrafts %}
+  
+        <tr  >
+            <td>{{watercraft.id}}  </td>
+            <th scope="row"><img  src="\templates\Images\{{watercraft.cover_image}}"  width="100" height="100"></th><!---->
+            
+            <td>{{watercraft.title}}</td>
+            <td>{{watercraft.year}}</td>
+            <td>{{watercraft.color}}</td>
+            <td>
+            
+            
+            <script type="text/javascript">
+                function numberWithCommas(num) {
+                    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                }
+                document.write(numberWithCommas({{watercraft.price}}));
+            </script>
+            </td>
+            
+            
+            <td><a href="/watercraft/{{watercraft.id}}" class="btn btn-info" >Go To Advert</a></td>
+            <td><a href="/deletewatercraft/{{watercraft.id}}" class = "btn btn-danger">Delete</a></td>
+        </tr>
+
+        {% endfor %}
+        
+        </tbody>
+    </table> 
+
+
+    
+
+{% else %}
+{% endif %}
+
+
+{% if aircrafts %}
+
+    <br>
+    <h5>All aircraft adverts:</h5>
+    <br>
+
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Image</th>
+            <th scope="col">Title</th>
+            <th scope="col">Year</th>
+            <th scope="col">Color</th>
+            <th scope="col">Price</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            
+        </tr>
+        </thead>
+        <tbody>
+        {% for aircraft in aircrafts %}
+  
+        <tr  >
+            <td>{{aircraft.id}}  </td>
+            <th scope="row"><img  src="\templates\Images\{{aircraft.cover_image}}"  width="100" height="100"></th><!---->
+            
+            <td>{{aircraft.title}}</td>
+            <td>{{aircraft.year}}</td>
+            <td>{{aircraft.color}}</td>
+            <td>
+            
+            
+            <script type="text/javascript">
+                function numberWithCommas(num) {
+                    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                }
+                document.write(numberWithCommas({{aircraft.price}}));
+            </script>
+            </td>
+           
+            
+            <td><a href="/aircraft/{{aircraft.id}}" class="btn btn-info" >Go To Advert</a></td>
+            <td><a href="/deleteaircraft/{{aircraft.id}}" class = "btn btn-danger">Delete</a></td>
+        </tr>
+
+        {% endfor %}
+        
+        </tbody>
+    </table> 
+
+{% else %}
+{% endif %}
+
+<!--
+{% if otomobiles %}
+
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Image</th>
+            <th scope="col">Brand</th>
+            <th scope="col">Series</th>
+            <th scope="col">Model</th>
+            <th scope="col">Title</th>
+            <th scope="col">Year</th>
+            <th scope="col">Color</th>
+            <th scope="col">Price</th>
+            <th scope="col">City</th>
+            <th scope="col">District</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            
+            
+        </tr>
+        </thead>
+        <tbody>
+        {% for otomobile in otomobiles %}
+  
+        <tr  >
+            <td>{{otomobile.id}}  </td>
+            <th scope="row"><img  src="\templates\Images\{{otomobile.cover_image}}"  width="100" height="100"></th>
+            
+            <td>{{otomobile.brand}}  </td>
+            <td>{{otomobile.series}}</td>
+            <td>{{otomobile.model}}</td>
+            <td>{{otomobile.title}}</td>
+            <td>{{otomobile.year}}</td>
+            <td>{{otomobile.color}}</td>
+            <td>
+            
+            
+            <script type="text/javascript">
+                function numberWithCommas(num) {
+                    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                }
+                document.write(numberWithCommas({{otomobile.price}}));
+            </script>
+            </td>
+            <td>{{otomobile.city}}</td>
+            <td>{{otomobile.district}}</td>
+            
+            <td><a href="/otomobile/{{otomobile.id}}" class="btn btn-info" >Go To Advert</a></td>
+            <td><a href="/delete/{{otomobile.id}}" class="btn btn-danger" >Delete Advert</a></td>
+            
+        </tr>
+
+        {% endfor %}
+        
+        </tbody>
+    </table> 
+
+{% else %}
+{% endif %}-->
+<br><br><br><br><br>
+
+{% endblock body %}

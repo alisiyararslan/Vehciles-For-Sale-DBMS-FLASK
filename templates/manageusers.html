@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<br>
+<h3>List of all users</h3>
+
+<hr>
+
+<br>
+
+{% if users %}
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">User Id</th>
+            <th scope="col">Username</th>
+            <th scope="col">User Email</th>
+            <th scope="col">Authority</th>
+            <th scope="col"></th>
+            
+            
+        </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+        <tr>
+            
+            <td>{{user.id}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+            
+            {% if user["user_id"] %}
+            <td><h5>ADMIN</h5></td>
+            {% else %}
+            <td><a href="/giveAdminAuthority/{{user.id}}" class="btn btn-success " >Give admin authority</a></td>
+            {% endif %}
+            <td><a href="/deleteUser/{{user.id}}" class="btn btn-danger " >Delete the user</a></td>
+            
+            
+        </tr>
+        {% endfor %}
+        
+        
+        </tbody>
+    </table> 
+{% else %}
+{% endif %}
+
+{% endblock body %}

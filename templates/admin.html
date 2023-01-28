@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<a href="/manageUsers" class="btn btn-info btn-lg" >Manage Users</a><br><br>
+
+<a href="/manageAdverts" class="btn btn-info btn-lg" >Manage Adverts</a><br><br>
+<h3>Record of user logins and logouts</h3>
+
+
+<hr>
+
+
+
+
+
+<br><br>
+
+{% if logs %}
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">Type</th>
+            <th scope="col">User Id</th>
+            <th scope="col">Username</th>
+            <th scope="col">Date</th>
+            
+        </tr>
+        </thead>
+        <tbody>
+        {% for log in logs %}
+        <tr>
+            
+            <td>{{log.id}}</td>
+            <td>{{log.type}}</td>
+            <td>{{log.user_id}}</td>
+            <td>{{log.username}}</td>
+            <td>{{log.date}}</td>
+            
+            
+        </tr>
+        {% endfor %}
+        
+        
+        </tbody>
+    </table> 
+{% else %}
+{% endif %}
+
+
+
+{% endblock body %}

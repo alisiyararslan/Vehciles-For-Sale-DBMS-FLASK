@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  <script type="text/javascript">
+    
+
+  </script>
+
+{% endblock head %}
+
+{% block body %}
+
+<h3>Otomobile Adverts</h3>
+<hr>
+
+<div style=" height: 50px;
+  width: 1120px;">
+  
+    <div style=" height: 50px;width: 650px;float: left;">
+  
+        <div class="input-group mb-3" style="float: left;">
+
+            <form action="/searchotomobile" method = "post">
+                <input type="text" name = "keyword" class="input-sm" maxlength="64" placeholder="Search...">
+                <button type="submit" class="btn btn-danger">Search</button>
+            </form>
+
+        </div>
+
+    </div>
+  
+  <div style=" height: 50px;width: 150px;float: right;">
+  
+    <div class="dropdown" >
+  
+  <button class="btn btn-info dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Advanced Sorting
+  </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="/sortOtomobile/highestFirstPrice">By Price (highest first)</a>
+        <a class="dropdown-item" href="/sortOtomobile/lowestFirstPrice">By Price (lowest first)</a>
+        <a class="dropdown-item" href="/sortOtomobile/newestFirstDate">By Date (newest posting first)</a>
+        <a class="dropdown-item" href="/sortOtomobile/oldestFirstDate">By Date (oldest post first)</a>
+        <a class="dropdown-item" href="/sortOtomobile/lowestFirstKm">By Km (lowest first)</a>
+        <a class="dropdown-item" href="/sortOtomobile/highestFirstKm">By Km (highest first)</a>
+        <a class="dropdown-item" href="/sortOtomobile/oldFirstYear">By Year (old first)</a>
+        <a class="dropdown-item" href="/sortOtomobile/newFirstYear">By Year (new first)</a>  
+      </div>
+    </div>
+  </div>
+
+  </div>
+<br><br>
+
+{% if otomobiles %}
+
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Image</th>
+            <th scope="col">Brand</th>
+            <th scope="col">Series</th>
+            <th scope="col">Model</th>
+            <th scope="col">Title</th>
+            <th scope="col">Year</th>
+            <th scope="col">Color</th>
+            <th scope="col">Price</th>
+            <th scope="col">City</th>
+            <th scope="col">District</th>
+            <th scope="col"></th>
+            
+        </tr>
+        </thead>
+        <tbody>
+        {% for otomobile in otomobiles %}
+  
+        <tr  >
+            <td>{{otomobile.id}}  </td>
+            <th scope="row"><img  src="\templates\Images\{{otomobile.cover_image}}"  width="100" height="100"></th><!---->
+            
+            <td>{{otomobile.brand}}  </td>
+            <td>{{otomobile.series}}</td>
+            <td>{{otomobile.model}}</td>
+            <td>{{otomobile.title}}</td>
+            <td>{{otomobile.year}}</td>
+            <td>{{otomobile.color}}</td>
+            <td>
+            
+            
+            <script type="text/javascript">
+                function numberWithCommas(num) {
+                    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                }
+                document.write(numberWithCommas({{otomobile.price}}));
+            </script>
+            </td>
+            <td>{{otomobile.city}}</td>
+            <td>{{otomobile.district}}</td>
+
+            <td><a href="/otomobile/{{otomobile.id}}" class="btn btn-info" >Go To Advert</a></td>
+        </tr>
+
+        {% endfor %}
+        
+        </tbody>
+    </table> 
+
+{% else %}
+{% endif %}
+
+{% endblock body %}

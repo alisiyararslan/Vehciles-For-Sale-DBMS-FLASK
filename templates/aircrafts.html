@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  <script type="text/javascript">
+    
+
+  </script>
+
+{% endblock head %}
+
+{% block body %}
+
+<h3>Aircraft Adverts</h3>
+<hr>
+
+<div style=" height: 50px;
+  width: 1120px;">
+  
+    <div style=" height: 50px;width: 650px;float: left;">
+  
+        <div class="input-group mb-3" style="float: left;">
+
+            <form action="/searchaircraft" method = "post">
+                <input type="text" name = "keyword" class="input-sm" maxlength="64" placeholder="Search...">
+                <button type="submit" class="btn btn-danger">Search</button>
+            </form>
+
+        </div>
+
+    </div>
+  
+  <div style=" height: 50px;width: 150px;float: right;">
+  
+    <div class="dropdown" >
+  
+  <button class="btn btn-info dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Advanced Sorting
+  </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="/sortaircraft/highestFirstPrice">By Price (highest first)</a>
+        <a class="dropdown-item" href="/sortaircraft/lowestFirstPrice">By Price (lowest first)</a>
+        <a class="dropdown-item" href="/sortaircraft/newestFirstDate">By Date (newest posting first)</a>
+        <a class="dropdown-item" href="/sortaircraft/oldestFirstDate">By Date (oldest post first)</a>
+        <a class="dropdown-item" href="/sortaircraft/oldFirstYear">By Year (old first)</a>
+        <a class="dropdown-item" href="/sortaircraft/newFirstYear">By Year (new first)</a>  
+      </div>
+    </div>
+  </div>
+
+  </div>
+<br><br>
+
+{% if aircrafts %}
+
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Image</th>
+            <th scope="col">Title</th>
+            <th scope="col">Year</th>
+            <th scope="col">Color</th>
+            <th scope="col">Price</th>
+            <th scope="col">City</th>
+            <th scope="col">District</th>
+            <th scope="col"></th>
+            
+        </tr>
+        </thead>
+        <tbody>
+        {% for aircraft in aircrafts %}
+  
+        <tr  >
+            <td>{{aircraft.id}}  </td>
+            <th scope="row"><img  src="\templates\Images\{{aircraft.cover_image}}"  width="100" height="100"></th><!---->
+            
+            <td>{{aircraft.title}}</td>
+            <td>{{aircraft.year}}</td>
+            <td>{{aircraft.color}}</td>
+            <td>
+            
+            
+            <script type="text/javascript">
+                function numberWithCommas(num) {
+                    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                }
+                document.write(numberWithCommas({{aircraft.price}}));
+            </script>
+            </td>
+            <td>{{aircraft.city}}</td>
+            <td>{{aircraft.district}}</td>
+            
+           <!-- <td><a href="aircraft/{{aircraft.id}}" ><img  src="templates\styles\goToAdvert.png"  width="110" height="110"></a></td>-->
+            <td><a href="/aircraft/{{aircraft.id}}" class="btn btn-info" >Go To Advert</a></td>
+        </tr>
+
+        {% endfor %}
+        
+        </tbody>
+    </table> 
+
+{% else %}
+{% endif %}
+
+{% endblock body %}
