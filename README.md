@@ -77,9 +77,13 @@ Manage Adverts page (admin): The page where the admin manages the adverts, can d
 ADDITIONAL PROPERTIES
 
 ● It is checked whether the email entered by the user while registering on the website has the correct form.
+
 ● While the password entered by the user is saved in the database, it is encrypted from beginning to end. Even the database admin cannot see it. Thus, it does not constitute a situation contrary to the law on the protection of personal data.
+
 ● The user cannot update or delete an advertisement that does not belong to him/her through the website pages. However, if a request such as editotomobile/82 or deleteotomobile/82 is found in the url section and this user does not have a vehicle with an id of 82, this request will also be blocked.
+
 ● On the code side, we have a decorator function called login_required. This function checks whether there is a user currently logged into the system. Before functions where user login  is required, control is provided on a single line with @login_required. With this development, if the user makes requests such as /dashboard , /deleteotomobile/X, /editotomobile/X to the url section without logging into the system, the system will reject them and the user will be directed to the login screen.
+
 ● The ck editor was used to advert descriptions to the postings. In this way, it was possible to change the font of the text.
 
 
