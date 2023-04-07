@@ -31,3 +31,25 @@ Dashboard Page: The page that allows the user to add advertisements and to list 
 ![image](https://user-images.githubusercontent.com/95187142/230668979-9b8f4e1d-7090-437f-abf0-67d31d08c16b.png)
 ![image](https://user-images.githubusercontent.com/95187142/230669012-1b130337-5f80-4583-8b74-97ff13349fe6.png)
 ![image](https://user-images.githubusercontent.com/95187142/230669042-3b525278-6e27-4eb7-985f-f13f1d793bdb.png)
+
+
+Create an otomobile advert page: It is a page that allows users to create and publish an advertisement for an otomobile on the site. This page include a form that asks the user to provide information about the otomobile they are selling, such as the make, price, year, and color
+
+![image](https://user-images.githubusercontent.com/95187142/230669300-e5743a2b-9eca-4a9d-a0a8-db509d7855b2.png)
+![image](https://user-images.githubusercontent.com/95187142/230669309-baa92833-f97f-40cf-9584-593a060728e8.png)
+![image](https://user-images.githubusercontent.com/95187142/230669322-0553ba8e-dcd0-40a6-805b-135717646036.png)
+
+Create an motorcycle advert page: It is a page that allows users to create and publish an advertisement for an motorcycle on the site. This page include a form that asks the user to provide information about the motorcycle they are selling, such as the make, price, year, and color
+
+![image](https://user-images.githubusercontent.com/95187142/230669389-cc7e18d2-01a9-4b55-a1d4-4b82b276f33a.png)
+![image](https://user-images.githubusercontent.com/95187142/230669397-48b8b917-86b7-46f3-8287-f61e2fdb01e4.png)
+![image](https://user-images.githubusercontent.com/95187142/230669407-a1206591-0463-4d72-9934-f8447646d0de.png)
+
+
+
+
+
+
+
+
+
