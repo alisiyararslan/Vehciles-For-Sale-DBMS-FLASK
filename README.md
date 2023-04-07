@@ -5,7 +5,7 @@ A vehicle for sale system is a system that allows individuals or businesses to l
 Home Page: main page of a website that is the first page a visitor sees when they visit the site. It includes links to the other pages on the site and provide a brief overview of the site's purpose and content
 
 
-![image](https://user-images.githubusercontent.com/95187142/230668558-b6aceb5d-3e02-468b-916e-4511d0e91748.png)
+![homepage](https://user-images.githubusercontent.com/95187142/230671225-93f14ac8-bfe2-4e33-b720-6ec1dbb63e4f.png)
 
 
 
@@ -46,8 +46,41 @@ Create an motorcycle advert page: It is a page that allows users to create and p
 ![image](https://user-images.githubusercontent.com/95187142/230669407-a1206591-0463-4d72-9934-f8447646d0de.png)
 
 
+Create an watercraft advert page: It is a page that allows users to create and publish an advertisement for an watercraft on the site. This page include a form that asks the user to provide information about the watercraft they are selling, such as the make, price, year, and color.
+
+![image](https://user-images.githubusercontent.com/95187142/230669525-357b4e8c-cb68-4ec5-b89b-476fc9133474.png)
+![image](https://user-images.githubusercontent.com/95187142/230669540-bcf1540c-c6eb-410d-8340-49d19e81f4c7.png)
+
+Create an aircraft advert page: It is a page that allows users to create and publish an advertisement for an aircraft on the site. This page include a form that asks the user to provide information about the aircraft they are selling, such as the make, price, year, and color
 
 
+![image](https://user-images.githubusercontent.com/95187142/230669633-1c5dcf13-4675-499c-ab3b-30c4d4cccb75.png)
+![image](https://user-images.githubusercontent.com/95187142/230669682-778f2fa6-801a-4ce3-886f-055c6aba69b5.png)
+
+Admin Page: It is only accessible to the website's administrators, or those who have been granted special access to manage the site's content and settings.
+
+![image](https://user-images.githubusercontent.com/95187142/230669874-3a66980e-0f08-4861-87f2-5630b71228e0.png)
+![image](https://user-images.githubusercontent.com/95187142/230669927-f56af93b-9f66-40b7-8b13-80504eb0892f.png)
+
+Manage users page(admin): The page where the admin manages users. can delete users or give admin privileges.
+
+![image](https://user-images.githubusercontent.com/95187142/230670174-7936514c-6a44-4fd8-ac1f-9d40df3c2aab.png)
+
+
+Manage Adverts page (admin): The page where the admin manages the adverts, can delete and view the adverts
+
+![image](https://user-images.githubusercontent.com/95187142/230670399-f38aa69e-6bbb-4fdb-b686-f3ba063d18e8.png)
+![image](https://user-images.githubusercontent.com/95187142/230670471-26ce974a-a067-4b08-b69f-8ef6b5c598f6.png)
+![image](https://user-images.githubusercontent.com/95187142/230670515-186bf312-59bb-4e17-bd9f-023c3ea139c8.png)
+![image](https://user-images.githubusercontent.com/95187142/230670546-3ce4af20-9651-4a71-a79c-0f9c9807832f.png)
+
+ADDITIONAL PROPERTIES
+
+● It is checked whether the email entered by the user while registering on the website has the correct form.
+● While the password entered by the user is saved in the database, it is encrypted from beginning to end. Even the database admin cannot see it. Thus, it does not constitute a situation contrary to the law on the protection of personal data.
+● The user cannot update or delete an advertisement that does not belong to him/her through the website pages. However, if a request such as editotomobile/82 or deleteotomobile/82 is found in the url section and this user does not have a vehicle with an id of 82, this request will also be blocked.
+● On the code side, we have a decorator function called login_required. This function checks whether there is a user currently logged into the system. Before functions where user login  is required, control is provided on a single line with @login_required. With this development, if the user makes requests such as /dashboard , /deleteotomobile/X, /editotomobile/X to the url section without logging into the system, the system will reject them and the user will be directed to the login screen.
+● The ck editor was used to advert descriptions to the postings. In this way, it was possible to change the font of the text.
 
 
 
