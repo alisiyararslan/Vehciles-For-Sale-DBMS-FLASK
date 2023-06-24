@@ -39,11 +39,23 @@ A vehicle for sale system is a system that allows individuals or businesses to l
 ![image](https://user-images.githubusercontent.com/95187142/230669309-baa92833-f97f-40cf-9584-593a060728e8.png)
 ![image](https://user-images.githubusercontent.com/95187142/230669322-0553ba8e-dcd0-40a6-805b-135717646036.png)
 
-**Otomobile advert detail page:** The user can access the details and explanations of an advertisement on this page. As you click on the photo of the ad, you can scroll through the photos of the ad.
+**Otomobile advert detail page:** The user can access the details and explanations of an advertisement on this page. As you click on the photo of the ad, you can scroll through the photos of the ad.(Since the Motorcycle, Aircraft and Watercraft ad detail pages are very similar to the Otomobile ad detail page, only the screenshots for the Otomobile are included.)
 
 ![image](https://github.com/aliSiyar/Vehciles-For-Sale-DBMS-FLASK/assets/95187142/afdcdcf3-29e7-457e-9bd4-e3ab098b20be)
 ![image](https://github.com/aliSiyar/Vehciles-For-Sale-DBMS-FLASK/assets/95187142/04ee1182-3909-437c-a3bf-3a53ad6a15db)
 ![image](https://github.com/aliSiyar/Vehciles-For-Sale-DBMS-FLASK/assets/95187142/eb230574-a77c-437e-b501-c30b8eb128e7)
+
+**Otomobile adverts page:** The user can sort the ads by price, date, year and km. By using the Search box, the user can find the ad they are looking for more quickly.(Since the Motorcycle, Aircraft and Watercraft adverts pages are very similar to the Otomobile adverts page, only the screenshots for the Otomobile are included.)
+
+![image](https://github.com/aliSiyar/Vehciles-For-Sale-DBMS-FLASK/assets/95187142/b473998a-8aa2-40ec-99eb-e93f665e80f5)
+
+![image](https://github.com/aliSiyar/Vehciles-For-Sale-DBMS-FLASK/assets/95187142/7f9d22f7-ba98-42c8-bb09-51938983a3a5)
+![image](https://github.com/aliSiyar/Vehciles-For-Sale-DBMS-FLASK/assets/95187142/a0ed1b5d-cd78-476c-a1d4-41f294b8a7b3)
+
+
+
+
+
 
 **Create an motorcycle advert page:** It is a page that allows users to create and publish an advertisement for an motorcycle on the site. This page include a form that asks the user to provide information about the motorcycle they are selling, such as the make, price, year, and color
 
@@ -79,6 +91,14 @@ A vehicle for sale system is a system that allows individuals or businesses to l
 ![image](https://user-images.githubusercontent.com/95187142/230670471-26ce974a-a067-4b08-b69f-8ef6b5c598f6.png)
 ![image](https://user-images.githubusercontent.com/95187142/230670515-186bf312-59bb-4e17-bd9f-023c3ea139c8.png)
 ![image](https://user-images.githubusercontent.com/95187142/230670546-3ce4af20-9651-4a71-a79c-0f9c9807832f.png)
+
+
+**ER DIAGRAM**
+![image](https://github.com/aliSiyar/Vehciles-For-Sale-DBMS-FLASK/assets/95187142/85cbbdc2-975b-4589-9c86-05f25ee0acf7)
+
+**SCHEMA**
+![image](https://github.com/aliSiyar/Vehciles-For-Sale-DBMS-FLASK/assets/95187142/d3701cba-9426-48a9-b51a-3a86fcb21569)
+
 
 **ADDITIONAL PROPERTIES**
 
