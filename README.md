@@ -5,7 +5,7 @@ A vehicle for sale system is a system that allows individuals or businesses to l
 Home Page: main page of a website that is the first page a visitor sees when they visit the site. It includes links to the other pages on the site and provide a brief overview of the site's purpose and content
 
 
-![homepage](https://user-images.githubusercontent.com/95187142/230671225-93f14ac8-bfe2-4e33-b720-6ec1dbb63e4f.png)
+![image](https://github.com/aliSiyar/Vehciles-For-Sale-DBMS-FLASK/assets/95187142/53a9e06b-58ec-4d3e-bc07-b9b41efeab61)
 
 
 
@@ -38,6 +38,11 @@ Create an otomobile advert page: It is a page that allows users to create and pu
 ![image](https://user-images.githubusercontent.com/95187142/230669300-e5743a2b-9eca-4a9d-a0a8-db509d7855b2.png)
 ![image](https://user-images.githubusercontent.com/95187142/230669309-baa92833-f97f-40cf-9584-593a060728e8.png)
 ![image](https://user-images.githubusercontent.com/95187142/230669322-0553ba8e-dcd0-40a6-805b-135717646036.png)
+
+Otomobile advert detail page:The user can access the details and explanations of an advertisement on this page. As you click on the photo of the ad, you can scroll through the photos of the ad.
+![image](https://github.com/aliSiyar/Vehciles-For-Sale-DBMS-FLASK/assets/95187142/afdcdcf3-29e7-457e-9bd4-e3ab098b20be)
+![image](https://github.com/aliSiyar/Vehciles-For-Sale-DBMS-FLASK/assets/95187142/04ee1182-3909-437c-a3bf-3a53ad6a15db)
+![image](https://github.com/aliSiyar/Vehciles-For-Sale-DBMS-FLASK/assets/95187142/eb230574-a77c-437e-b501-c30b8eb128e7)
 
 Create an motorcycle advert page: It is a page that allows users to create and publish an advertisement for an motorcycle on the site. This page include a form that asks the user to provide information about the motorcycle they are selling, such as the make, price, year, and color
 
