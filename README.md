@@ -93,11 +93,14 @@ A vehicle for sale system is a system that allows individuals or businesses to l
 ![image](https://user-images.githubusercontent.com/95187142/230670546-3ce4af20-9651-4a71-a79c-0f9c9807832f.png)
 
 
-**ER DIAGRAM**
+**ER DIAGRAM:**
+
 ![image](https://github.com/aliSiyar/Vehciles-For-Sale-DBMS-FLASK/assets/95187142/85cbbdc2-975b-4589-9c86-05f25ee0acf7)
 
-**SCHEMA**
-![image](https://github.com/aliSiyar/Vehciles-For-Sale-DBMS-FLASK/assets/95187142/7fcbbbac-0280-45bb-9527-2936e09e495b)
+**SCHEMA:**
+
+![image](https://github.com/aliSiyar/Vehciles-For-Sale-DBMS-FLASK/assets/95187142/91de61aa-16a1-4f4c-9c3b-5ebf5e469193)
+
 
 
 
